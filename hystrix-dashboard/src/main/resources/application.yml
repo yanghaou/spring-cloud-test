@@ -1,0 +1,8 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: hystrix-dashboard # 项目名称尽量用小写
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost

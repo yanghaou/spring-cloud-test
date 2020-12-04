@@ -1,0 +1,25 @@
+
+server:
+  port: 8020
+spring:
+  application:
+    name: feign-consumer
+  cloud:
+    discovery:
+      enabled: true
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

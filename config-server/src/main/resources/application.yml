@@ -1,0 +1,19 @@
+
+server:
+  port: 8035
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/yhaou/config.git
+          search-paths: config-server
+          default-label: master #配置文件分支
+          username: 13122121696
+          password: as159753df
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
